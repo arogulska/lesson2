@@ -12,16 +12,16 @@ q_a = {
     }
 
 
-def ask_machine():
+def ask_machine(dictionary, command, other):
     while True:
-        user_question = input("Ask me a question: ")
-        if user_question in q_a:
-            print (q_a[user_question])
+        user_question = input(command)
+        if user_question in dictionary:
+            print (dictionary[user_question])
             break
         else:
-            print ("Sorry, I don't understand")
+            print (other)
             
 
 
-ask_machine()
+ask_machine(q_a, "Ask me a question: ", "Sorry, I don't understand")
 #ask_user()
